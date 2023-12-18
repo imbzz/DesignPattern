@@ -1,0 +1,34 @@
+
+server:
+  port: 8081
+
+spring:
+  datasource:
+    # jdbc 连接h2数据库mem内存形式数据库design
+    url: jdbc:h2:mem:design
+    username: design
+    password: design
+    # 数据库驱动
+    driver-class-name: org.h2.Driver
+    console:
+      enabled: true
+    # 通过/myH2访问可视化接口
+    path: /myH2
+  jpa:
+    properties:
+      # 自动更新ddl
+      hibernate:
+       hbm2ddl:
+         auto: update
+    #配置mysql5 InnoDb Dialect
+    dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    # 数据库打印sql
+    show-sql: true
+
+
+
+
+
+
+
+
